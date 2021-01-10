@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css.css">
+	<title> JS FORM</title>
+	<script type="text/javascript">
+		function check() {
+			if(document.getElementById("favmovie").value.length!=10) {
+				document.getElementById("favmovie").innerHTML="Enter 10 digits";
+			}
+		}
+		function myfunc() {
+			alert("Hello!");
+		}
+		function as(){setTimeout(function(){document.body.style.backgroundColor="#"+Math.round(Math.random()*16777215).toString(16);},5000);};
+		function allfunc() {
+			check();
+			myfunc();
+			as();
+		}
+		function validateForm() {
+  var x = document.forms["myForm"]["favmovie"].value;
+  if (x == "") {
+    alert("Favorite must be filled out");
+    return false;
+  }
+}
+	</script>
+</head>
+<body onload="allfunc()">
+	
+<h2>HTML Forms</h2>
+
+<form  name="myForm" onsubmit="return validateForm()" action="https://www.wikipedia.org">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Enter your first  name" required><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Enter your last name" required><br>
+  <label for="address">Address :</label><br>
+  <input type="text" id="address" name="address"  placeholder="Enter your address"><br>
+  <label for="favmovie">Favorite Book:</label><br>
+  <input type="text" id="favmovie" name="fname" placeholder="Enter your favorite Book"><br>
+  <label for="favsinger">Favorite cicketer :</label><br>
+  <input type="text" id="fname" name="fname" value="" placeholder="Enter your favorite cricketer"><br>
+  <label>Personal Info</label><br>
+  <input type="password"> <br>
+  <input type="submit" value="Submit">
+</form> 
+
+<h1>Saample Text</h1>
+<p class="sample" >VIRAT <span style="background-color: blue;">KOHLI</span> is an Indian cricketer and the current <span style="font-weight: bold;">Captain</span> of the India national team.  A right-handed top-order batsman, Kohli is regarded as one of the best contemporary batsmen in the world.RUN's <span style="text-decoration: underline;">1000s</span>, He plays for Royal Challengers Bangalore in the Indian Premier League, and has been the team's captain since.</p>
+
+</body>
+</html>
